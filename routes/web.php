@@ -13,7 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "WebController@home");
+Route::get('/', "WebController@home")->name("index");
+Route::get("/about", "WebController@about")->name("about");
+Route::get("/services", "WebController@services")->name("services");
+Route::get("/services/single")->name("services_single")->name("services.single");
+Route::get("/projects", "WebController@projects")->name("projects");
+Route::get('/projects/single', 'WebController@projects_single')->name("projects.singie");
+Route::get("/contacts", "WebController@contacts")->name("contacts");
 
 Auth::routes();
 

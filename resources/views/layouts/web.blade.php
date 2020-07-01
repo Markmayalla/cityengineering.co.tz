@@ -25,11 +25,13 @@
                         +255 754 620 390  | info@cityengineering.co.tz
                     </div>
                     <div class="bg-primary d-flex">
-                        <div class="px-4 py-3 bg-success text-light">Home</div>
-                        <div class="px-4 py-3">About us</div>
-                        <div class="px-4 py-3">Our Services</div>
-                        <div class="px-4 py-3">Projects</div>
-                        <div class="px-4 py-3">Contact Us</div>
+                        <div class="px-4 py-3 bg-success text-light"><a href="{{ route("index") }}">Home</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("about") }}">About</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("services") }}">Our Services</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("services.single") }}">Service</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("projects") }}">Projects</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("projects.single") }}">Project</a></div>
+                        <div class="px-4 py-3"><a href="{{ route("contacts") }}">Contacts</a></div>
                     </div>
                 </div>
             </div>
@@ -38,4 +40,5 @@
 
     @yield('content')
     {{-- <h1>Footer</h1> --}}
+
 @endsection
