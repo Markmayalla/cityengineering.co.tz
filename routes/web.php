@@ -18,3 +18,12 @@ Route::get('/', "WebController@home");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->group(function () {
+    Route::resource('services', 'ServiceController');
+    Route::resource('clients', 'ClientController');
+    Route::resource('projects', 'ProjectController');
+    Route::resource('slides', 'SlideController');
+    Route::resource('certificates', 'CertificateController');
+    Route::resource('settings', 'SettingController');
+});
